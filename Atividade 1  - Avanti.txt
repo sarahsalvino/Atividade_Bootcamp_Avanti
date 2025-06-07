@@ -1,0 +1,25 @@
+1. Explique, com suas palavras, o que é machine learning ?
+R: Machine learning é uma subárea da inteligência artificial. Ele é usado para a criação de algoritmos, automatização de tarefas e previsão de resultados.
+
+
+2. Explique o conceito de conjunto de treinamento, conjunto de validação e conjunto de teste em machine learning.
+
+R: No treinamento de um modelo, é preciso dividir o conjunto de dados entre treino, validação e teste. O conjunto de treinamento serve para o modelo aprender, o conjunto de validação é usado para avaliar e ajustar o modelo durante o treinamento, e o conjunto de teste é usado para verificar o resultado final com dados que o modelo ainda não viu.
+
+
+
+3. Explique como você lidaria com dados ausentes em um conjunto de dados de treinamento
+
+R: Dependendo do conjunto de dados, pode ser necessário excluir as linhas com valores ausentes ou preencher esses valores com a média, mediana, ou até com valores de vizinhos mais próximos.
+
+
+
+4. O que é uma matriz de confusão e como ela é usada para avaliar o desempenho de um modelo preditivo?
+
+R: A matriz de confusão, também conhecida como matriz de erro, é uma forma de visualizar os resultados de um algoritmo de classificação. Ela mostra o que o modelo acertou e errou em relação aos valores reais.
+
+
+
+5. Em quais áreas (tais como construção civil, agricultura, saúde, manufatura, entre outras) você acha mais interessante aplicar algoritmos de machine learning?
+
+R: Acredito que machine learning pode ser útil em todas as áreas. Na construção civil, pode ajudar a alinhar parâmetros de planta e estrutura. Na agricultura, pode automatizar processos que normalmente levariam muito tempo. E na saúde, pode prever riscos e entender como as doenças se correlacionam.

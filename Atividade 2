@@ -16,7 +16,7 @@ def filtrar_nprimos(lista):
             n_primo = True
             for i in range(2, num):
                 if num % i == 0:
-                    eh_primo = False
+                    n_primo = False
                     break
             if n_primo:
                 primos.append(num)

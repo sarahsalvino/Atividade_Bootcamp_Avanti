@@ -1,1 +1,87 @@
 
+import pandas as pd 
+
+#Questão 1: Escreva uma função que receba uma lista de números e retorne outra lista com os números ímpares
+
+def filtrar_impares(lista):
+    return [numero for numero in lista if numero % 2 != 0]
+
+
+#Questão 2: Escreva uma função que receba uma lista de números e retorne outra lista com os números primos presentes.
+
+def filtrar_nprimos(lista):
+    primos = []
+    for num in lista:
+        if num > 1:
+            n_primo = True
+            for i in range(2, num):
+                if num % i == 0:
+                    eh_primo = False
+                    break
+            if n_primo:
+                primos.append(num)
+    return primos
+
+#Questão 3: Escreva uma função que receba duas listas e retorne outra lista com os elementos que estão presentes em apenas uma das listas.
+
+def elementos_exclusivos(lista1, lista2):
+    resultado = []
+    for item in lista1:
+        if item not in lista2:
+            resultado.append(item)
+    for item in lista2:
+        if item not in lista1 and item not in resultado:
+            resultado.append(item)
+    return resultado
+
+#Questão 4: Dada uma lista de números inteiros escreva uma função para encontrar o segundo maior valor na lista.
+
+def segundo_maior(lista):
+    lista_unica = list(set(lista))  
+    lista_unica.sort()              
+    if len(lista_unica) >= 2:
+        return lista_unica[-2]      
+    else:
+        return None  
+    
+
+#Questão 5: Crie uma função que receba uma lista de tuplas, cada uma contendo o nome e a idade de uma pessoa, e retorne a lista ordenada pelo nome das pessoas em ordem alfabética.
+
+def ordenar_por_nome(lista):
+    return sorted(lista, key=lambda pessoa: pessoa[0])
+
+pessoas = [("Bruna", 25), ("Pedro", 30), ("Paula", 20)]
+ordenadas = ordenar_por_nome(pessoas)
+print(ordenadas)
+
+#Questão 6: Como identificar e tratar outliers em uma coluna numérica, usando desvio padrão ou quartis?
+
+#R: Outliers são valores distantes da média, podemos remover e susbtituir por valores de média ou mediana da coluna.
+
+#Questão 7: Como concatenar vários DataFrames (empilhando linhas ou colunas),mesmo que tenham colunas diferentes? Dica: Utiliza-se pd.concat() especificando axis=0 (linhas) ou axis=1, (colunas). Quando há colunas diferentes, os valores ausentes são preenchidos com NaN.
+
+#R: Seria necessário utilizar o Pandas, ter os dataframes que deseja juntar, com a função pd.concat() passar a lista dos dataframes que quer concatenar, definir o parâmetro axis, pode optar por preencher os valores nulos.
+
+
+#Questão 8: Utilizando pandas, como realizar a leitura de um arquivo CSV em um DataFrame e exibir as primeiras linhas
+
+import pandas as pd
+
+dataset = pd.read_csv(arquivo)
+
+dataset.head()
+
+
+#Questão 9: Utilizando pandas, como selecionar uma coluna específica e filtrar linhas em um “DataFrame” com base em uma condição?
+
+coluna = dataset['coluna']
+
+filtrando = dataset[dataset['coluna'] > 10]
+
+#Questão 10: Utilizando pandas, como lidar com valores ausentes (NaN) em um DataFrame?
+
+dataset.isnull() #para verificar aonde estão os valores nulos
+dataset.isnal().sum() #para somar os valores nulos
+dataset.dropna() #remover as linhas de valores nulos
+
+#ou preencher com moda, média, mediana 
